@@ -3,62 +3,53 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
+      <header className={styles.menu}>
       <Head>
-        <title>Create Next App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Google Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+        <div className={`${styles.menu__section} ${styles.left}`}>
+          <img className={styles.menu__icon} src="/assets/burger-icon.svg" alt="Burger" />
+          <a className={`${styles.menu__link} ${styles.active}`}>All</a>
+          <a className={styles.menu__link}>Images</a>
+        </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <div className={`${styles.menu__section} ${styles.right}`}>
+          <img className={styles.menu__icon} src="/assets/more-icon.svg" />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          <div className={styles.menu__profile}>
+            <img className={styles.menu__avatar__frame} src="/assets/circle-frame.svg" />
+            <img
+            className={styles.menu__avatar}
+              src="/assets/face_co.svg"
+            />
+          </div>
+        </div>
+      </header>
+      <main className={styles.content}>
+        <img className={styles.content__logo} src="/assets/logo.png" alt="UI Clone" />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <input className={styles.content__search} type="text" />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className={styles.content__offer}>
+          Made with 💜 by
+          <a href="https://github.com/Samuelves"> Ives Samuel</a> for studying
+          purposes
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        <div className={`${styles.footer__section} ${styles.footer__location}`}>
+          <span>Brazil</span>
+        </div>
+
+        <div className={`${styles.footer__section} ${styles.footer__links}`}>
+          <a>Settings</a>
+          <a>Privacy</a>
+          <a>Terms</a>
+        </div>
       </footer>
     </div>
   )
